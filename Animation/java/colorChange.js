@@ -6,7 +6,7 @@
 
 
 function setup() {
-  createCanvas(400, 300);
+  createCanvas(400, 400);
   
 }
 
@@ -29,3 +29,13 @@ function circleo(x,y) {
   
   
 }
+
+
+// function setup () {
+//   createCanvas(400,400)
+  
+// }
+
+// function draw () {
+//   console.log("mark!")
+// }
