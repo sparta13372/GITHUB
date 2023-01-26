@@ -17,7 +17,7 @@ function draw(){
 
 function circleo(x,y) {
     if(x>200) {
-        fill(255,255,0) 
+        fill(245, 66, 66) 
     } else {
         fill(10,50,100)
     }
