@@ -11,9 +11,6 @@ mcdDiv.style.height = square.height + "px"
 mcdDiv.style.width = square.width + "px"
 mcdDiv.style.backgroundColor = "#01209f"
 
-
-//adds "mc" in the inner html of the div on every click
 function change() {
     mcdDiv.innerHTML += "mc"
-    
 }
