@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 16px;
+}
+
+.nestDiv {
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+.buttons {
+    margin: 10px;
+    height: 50px;
+    width: 500px;
+    font-size: 20px;
+}
+
+.answerStuff {
+    height: 500px;
+    width: 1530px;
+    background-color: gray;
+    /* opacity: 50%; */
+    font-size: 100px;
+}
+
+.wrapper {
+    margin: 20px;
+}
+
+.color {
+    height: 100px;
+    width: 500px;
+    background-color: black;
+}
+
+.hexCode {
+    height: 50px;
+    width: 500px;
+    background-color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.colorCalc {
+    
+}
