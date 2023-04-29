@@ -1,5 +1,5 @@
 
-class Bullet {
+class Bullet { //bulet construct
     constructor(x) {
         this.x = x
         this.y = 520
@@ -16,7 +16,7 @@ var score = 0
 let bullets = [
 
 ]
-let enemies = [
+let enemies = [ //enemy aray for poisition
     {x: 0, y: 100, isAlive: true}, 
     {x: 0, y: 200, isAlive: true},
     {x: 0, y: 300, isAlive: true},
@@ -34,12 +34,12 @@ let enemies = [
     {x: 400, y: 300, isAlive: true},
 ]
 
-function setup () {
+function setup () { //size and frame rate of animation
     createCanvas(800,600)
     frameRate(60);
 }
 
-function preload(){
+function preload(){ //sprite work
   img1 =loadImage("img/alien .png")
   img2 =loadImage("img/hero.png")
   img3 =loadImage("img/youLose!.png")
@@ -47,7 +47,7 @@ function preload(){
 }
 
 
-function playerCollision () {
+function playerCollision () { //you lose condition
     enemies.forEach(enemy=>{
         if(y+enemy.y >= 450) {
             if(enemy.isAlive) {
@@ -63,7 +63,7 @@ function draw () {
     background("#1f0336")
     fill("yellow")
     textSize(32);
-    text("score:" + score, 15 , 30)
+    text("score:" + score, 15 , 30) //score
     
     enemies.forEach(enemy=>{
         if(enemy.isAlive) {
@@ -73,7 +73,7 @@ function draw () {
 
     if(playerAlive) {
         image(img2, playerX, 500, 150, 50)
-    }
+    } //is the player alive?
 
     x = x + vel
     
@@ -82,15 +82,15 @@ function draw () {
     if (x>340 || x<40) {
         vel *= -1
         y += 8
-    }
+    } //moving enemies back and forth and slowly donw the screen
     
     playerX += pVel
 
-    playerCollision()
+    playerCollision() //calling collision
     
     if(score == 1500) {
         image(img4, 85, 120, 700, 300)
-    }
+    } //you win condition
 }
 
 function bulletFunction(bullet,index,arr) {
@@ -110,9 +110,9 @@ function bulletFunction(bullet,index,arr) {
             }
         }
         }
-}
+} //bullets, this one was hard
 
-function keyPressed () {
+function keyPressed () { //polayer movement and shooting
     if(keyCode === RIGHT_ARROW) {
         pVel = 5 
     } else if(keyCode === LEFT_ARROW) {
